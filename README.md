@@ -1,11 +1,13 @@
-# Timetable — Space Walk
+# Timetable — Space Walk / 03
 
 https://taogcd.github.io/timetable/space.html
 
 Click the space. WASD moves; Q/E turns; drag to look; R resets; Esc releases keyboard control. Touch movement buttons are available on mobile.
 
-The 3D letterforms and numbers come directly from the author's saved Timetable model. The surrounding field repeats the same geometry, with an open outer ceiling and white distance/height fade. The model is finite; infinity is a visual effect.
+The open field leads into a continuously descending tunnel. The outer ceiling remains open; the passage becomes covered after the descent. A fixed pool of 25 segments is recycled beyond the fog, with no forward end wall. Camera-relative rendering keeps long walks stable.
 
-This release bundles Three.js 0.186.1, the GLB model and the viewer inside space.html. No Three.js CDN is required. The existing timetable and its embedded images remain in index.html, with a new Space Walk link. The original Adobe Fonts kit is used for interface text. The 3D letters are mesh outlines. Three.js MIT license is retained in the bundle and THREE-LICENSE.txt.
+Three opaque texture tiles contain the author's original, unprojected glyph outlines: League Gothic, Superclarendon and Clarendon Text Pro. No replacement typeface or invented timetable values are used. The original 18 visible time columns are repeated. Native glyph proportions are retained; their arrangement is adapted to the surfaces. Ink and grid share one opaque surface, removing the previous coplanar depth conflict. Mipmaps and anisotropic filtering reduce distant text aliasing.
 
-Editable source and Blender iteration 02 are archived in the author's local project. Browser checks cover rendering, WASD/QE, collisions, focus release, reset, original page modes, screenshot, fullscreen and touch input. Visual approval by the author is pending.
+This single-file release bundles Three.js 0.186.1, three PNG tiles and the viewer inside space.html. No model download or Three.js CDN is required. The original page in index.html and its embedded images are unchanged. Interface text keeps the original Adobe Fonts kit. Three.js MIT license is retained.
+
+Editable website source, the finite Blender study and checks are archived locally as iteration 03. Browser walking repeats the tunnel; the Blender file is a finite sample. Technical verification is separate from the author's visual review.
