@@ -5358,7 +5358,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   clearLegacySavedFormats();
   const shouldUseSavedFormat = stageElement.dataset.useSavedFormat !== "false";
-  const defaultLayout = stageElement.dataset.defaultLayout || "original";
+  const requestedLayout = new URLSearchParams(location.search).get("layout");
+  const knownLayouts = ["original", "grid8", "grid20", "grid32", "grid3d", "portrait8"];
+  const defaultLayout = knownLayouts.includes(requestedLayout) ? requestedLayout : (stageElement.dataset.defaultLayout || "original");
   const defaultPrintState = stageElement.dataset.defaultPrintState || "modern";
   const savedLayout = shouldUseSavedFormat ? stage.importFormatState(readSavedFormat()) : null;
   if (savedLayout) {
@@ -5369,7 +5371,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   new GridOverlay(gridOverlayToggle, gridOverlay);
   renderPerspectiveGridSvg();
-  setMode(savedLayout || defaultLayout);
+  setMode(knownLayouts.includes(requestedLayout) ? requestedLayout : (savedLayout || defaultLayout));
   setPrintState(defaultPrintState);
   updatePrototypeLayer({ instant: true });
 });
@@ -5390,6 +5392,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <button class="mode-button" type="button" data-layout-option="grid20" aria-pressed="false">Landscape 20 Grid</button>
             <button class="mode-button" type="button" data-layout-option="grid32" aria-pressed="false">Landscape 32 Grid</button>
             <button class="mode-button" type="button" data-layout-option="grid3d" aria-pressed="false">3D Grid System</button>
+            <a class="mode-button" href="space.html" style="text-decoration:none">Space Walk ↗</a>
             <button class="mode-button" type="button" data-layout-option="portrait8" aria-pressed="false">Portrait 8 Grid</button>
           </div>
 
