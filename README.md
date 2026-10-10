@@ -1,13 +1,15 @@
-# Timetable — Space Walk / 03
+# Timetable — Space Walk / 04
 
 https://taogcd.github.io/timetable/space.html
 
-Click the space. WASD moves; Q/E turns; drag to look; R resets; Esc releases keyboard control. Touch movement buttons are available on mobile.
+Click the space. WASD moves; Q/E turns; drag to look; R resets; Esc releases controls. Touch controls are available on mobile.
 
-The open field leads into a continuously descending tunnel. The outer ceiling remains open; the passage becomes covered after the descent. A fixed pool of 25 segments is recycled beyond the fog, with no forward end wall. Camera-relative rendering keeps long walks stable.
+The open typographic field leads into a continuously descending covered tunnel. Its roof begins 16 metres into the descent. The exterior stays open above. Left walls carry monumental condensed route names; right walls layer and overlap the original serif station phrases. Existing words are recombined increasingly with distance into the passage, while dense lettering continues upwards and gradually fades.
 
-Three opaque texture tiles contain the author's original, unprojected glyph outlines: League Gothic, Superclarendon and Clarendon Text Pro. No replacement typeface or invented timetable values are used. The original 18 visible time columns are repeated. Native glyph proportions are retained; their arrangement is adapted to the surfaces. Ink and grid share one opaque surface, removing the previous coplanar depth conflict. Mipmaps and anisotropic filtering reduce distant text aliasing.
+Eighteen wall compositions use the author's saved League Gothic and Superclarendon outlines, without substitution fonts or new station names. Each location has a fixed arrangement, independent of frame or walking direction. Three stages of rearrangement are selected from two compact atlases; the geometry pool remains fixed at 25 segments. Ink, paper and rules share opaque surfaces, with mipmaps and anisotropic filtering. Atlas sampling retains continuous texture derivatives to avoid boundary flicker.
 
-This single-file release bundles Three.js 0.186.1, three PNG tiles and the viewer inside space.html. No model download or Three.js CDN is required. The original page in index.html and its embedded images are unchanged. Interface text keeps the original Adobe Fonts kit. Three.js MIT license is retained.
+The tunnel ceiling is rectified directly from the author's selected preview image. Its visible numbers and rules are retained as image content; it is not a historical data transcription. The floor retains the original eighteen visible timetable columns. The selected preview guides the appearance; the website is navigable 3D geometry rather than the preview image used as a backdrop.
 
-Editable website source, the finite Blender study and checks are archived locally as iteration 03. Browser walking repeats the tunnel; the Blender file is a finite sample. Technical verification is separate from the author's visual review.
+The single-file release bundles Three.js 0.186.1 and four PNG textures. No model or Three.js CDN download is required. The original index.html remains unchanged. Interface fonts use the original Adobe Fonts kit. See THREE-LICENSE.txt for the Three.js MIT license.
+
+Editable source and reference provenance are archived locally as iteration 04. Technical checks are performed before publishing; visual review belongs to the author. No post-publication visual review was requested.
