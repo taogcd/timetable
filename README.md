@@ -1,15 +1,23 @@
-# Timetable — Space Walk / 04
+# Timetable — Space Walk / 04.1
 
-https://taogcd.github.io/timetable/space.html
+Walk on a continuous level surface, or descend through its central opening into the underground timetable. The exterior remains level over the buried tunnel. The roof starts below ground and follows the descent; it no longer protrudes above the surface.
 
-Click the space. WASD moves; Q/E turns; drag to look; R resets; Esc releases controls. Touch controls are available on mobile.
+Live view: https://taogcd.github.io/timetable/space.html
 
-The open typographic field leads into a continuously descending covered tunnel. Its roof begins 16 metres into the descent. The exterior stays open above. Left walls carry monumental condensed route names; right walls layer and overlap the original serif station phrases. Existing words are recombined increasingly with distance into the passage, while dense lettering continues upwards and gradually fades.
+Click the view. **WASD** moves, **Q/E** turns, **hold Shift** moves three times faster. Drag to look around, **R** resets and **Esc** releases the controls. Standard movement is also faster than in 04.
 
-Eighteen wall compositions use the author's saved League Gothic and Superclarendon outlines, without substitution fonts or new station names. Each location has a fixed arrangement, independent of frame or walking direction. Three stages of rearrangement are selected from two compact atlases; the geometry pool remains fixed at 25 segments. Ink, paper and rules share opaque surfaces, with mipmaps and anisotropic filtering. Atlas sampling retains continuous texture derivatives to avoid boundary flicker.
+Left and right walls retain the original League Gothic and Superclarendon outlines in progressively recombined compositions. Their arrangement stays fixed in space, and the upper field fades with height.
 
-The tunnel ceiling is rectified directly from the author's selected preview image. Its visible numbers and rules are retained as image content; it is not a historical data transcription. The floor retains the original eighteen visible timetable columns. The selected preview guides the appearance; the website is navigable 3D geometry rather than the preview image used as a backdrop.
+The ceiling uses real triangulated Clarendon Text Pro outlines and the original time data shared with the Blender room (display columns 10–18). It does not use a screenshot or an image texture. Empty source cells stay empty. Continuous world rows and a procedural grid avoid stretched image seams.
 
-The single-file release bundles Three.js 0.186.1 and four PNG textures. No model or Three.js CDN download is required. The original index.html remains unchanged. Interface fonts use the original Adobe Fonts kit. See THREE-LICENSE.txt for the Three.js MIT license.
+Both surface and underground geometry use a fixed pool of 25 sections around the walker. The surface extends in both longitudinal directions without a maximum walking boundary. The underground route continues downwards and leads back to its entrance when reversed. Walking level is tracked independently so crossing the surface above the tunnel cannot drop the viewer into it.
 
-Editable source and reference provenance are archived locally as iteration 04. Technical checks are performed before publishing; visual review belongs to the author. No post-publication visual review was requested.
+Nine logic/geometry checks cover buried ceilings, level ground, route transitions, collision during sprinting, an hour of forward/backward movement, Shift release, source data, and bounded recycling. Local browser loading and navigation checked before publishing; the author reviews the visual result.
+
+This revision changes the website only. Existing Blender files remain historical finite samples.
+
+## Development
+
+`npm ci`, `npm test`, `npm run build`. `release/space.html` is self-contained apart from the existing Adobe Fonts stylesheet used by the interface. The original main page is unchanged.
+
+`assets/ceiling-provenance.json` records the source hashes. `scripts/export-ceiling-data.py` reads the original Blender source export; check its source path before rebuilding. The old `assets/tunnel/ceiling.png` is retained only as an unused historical asset.
