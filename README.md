@@ -12,7 +12,7 @@ The ceiling uses real triangulated Clarendon Text Pro outlines and the original 
 
 Both surface and underground geometry use a fixed pool of 25 sections around the walker. The surface extends in both longitudinal directions without a maximum walking boundary. The underground route continues downwards and leads back to its entrance when reversed. Walking level is tracked independently so crossing the surface above the tunnel cannot drop the viewer into it.
 
-Nine logic/geometry checks cover buried ceilings, level ground, route transitions, collision during sprinting, an hour of forward/backward movement, Shift release, source data, and bounded recycling. Local browser loading and navigation checked before publishing; the author reviews the visual result.
+Ten logic/geometry checks cover buried ceilings, level ground, route transitions, collision during sprinting, an hour of forward/backward movement, Shift release, source data, and bounded recycling. Local browser loading and navigation checked before publishing; the author reviews the visual result.
 
 This revision changes the website only. Existing Blender files remain historical finite samples.
 
